@@ -12,7 +12,13 @@ Replace post and "Blog Post Help" with the appropriate post type. This will crea
 	    $help = new wp_help();
 	    $help->create_help(array('post_type' => 'post','page_title' => 'Blog Post Help'));
 
-###To Do
+On the initial run of this function this will do the following things. 
+- Create a new post type of help, assigning appropriate labels and other logical defaults
+- Create a new post of the post type help with the title Blog Post Help and name of post_wp_help authored by the user with id 1
+- Create a new metabox on the edit post screen with the title Help that displays the contents of the page titled post_wp_help
+- Create a new contextual help tab on the edit post screen and display the contents of the page titled post_wp_help
+ 
+### To Do
 
 - Add ability to assign custom roles and make admins the default for editing help
 - remove ability to publish the help post type
