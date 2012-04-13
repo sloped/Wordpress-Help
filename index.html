@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wordpress-help by sloped</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Wordpress-help</h1>
+        <p>Create Help That is as easy to modify as a page. </p>
+        <p class="view"><a href="https://github.com/sloped/Wordpress-Help">View the Project on GitHub <small>sloped/Wordpress-Help</small></a></p>
+        <ul>
+          <li><a href="https://github.com/sloped/Wordpress-Help/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sloped/Wordpress-Help/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sloped/Wordpress-Help">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Wordpress Help Class</h2>
+
+<p>You love Wordpress and love your clients. You've built perfectly customized custom post types and metaboxes for them. Yet even though it should be obvious how it works, someone always comes around sending an email asking. How do we do this? This class can help. </p>
+
+<p>With two simple lines of code you can take advantage of the rich editing capabilities already built into Wordpress. Add images using the media library, use lists, heading, etc. And it's easy to update. No pushing code to the server when someone asks for their documentation to be updated. Just login to the admin interface, make the change, and click publish. </p>
+
+<h3>Benefits</h3>
+
+<ul>
+<li>Quickly and easily add and update help to your Wordpress theme or plugin.</li>
+<li>Uses the same Editor as all other Wordpress posts</li>
+<li>Uses the media library to store images</li>
+<li>Update your documentation using the admin interface and not by pushing code to your production server</li>
+<li>Easily add contextual help or a help metabox or even both to your edit post screen for posts, pages, or custom post types</li>
+</ul><h3>Drawbacks</h3>
+
+<ul>
+<li>Adds additional databases calls to admin requests</li>
+<li>Without appropriate permission structure users could potentially change documentation</li>
+<li>Changes do not easily sync back to development sites</li>
+<li>Not a plugin</li>
+</ul><h3>How It Works</h3>
+
+<p>Install the class in your theme or plugin directory. </p>
+
+<pre><code>git clone https://sloped@github.com/sloped/Wordpress-Help.git
+</code></pre>
+
+<p>Include the class file and create your first help page</p>
+
+<pre><code>include 'wp-help-class/help-class.php';
+$help = new wp_help();
+$help-&gt;create_help(array('post_type' =&gt; 'post','page_title' =&gt; 'Blog Post Help'));
+</code></pre>
+
+<p>Now login to your admin interface and click on the new Help custom post type</p>
+
+<p>Click on the new Blog Post Help page.</p>
+
+<p>Edit as you wish</p>
+
+<p>Click Update and either edit or create a new post. You will see the text you entered in the Blog Post Help post appear in both contextual help and as a metabox on your screen. </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sloped">sloped</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
